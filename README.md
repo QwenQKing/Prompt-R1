@@ -41,19 +41,21 @@ conda activate promptr1
 cd verl
 pip3 install -e .
 pip3 install vllm==0.8.3
-pip3 install flash-attn==2.7.4.post1  # Alternative download: https://github.com/Dao-AILab/flash-attention/releases
+pip3 install flash-attn==2.7.4.post1  # Download: https://github.com/Dao-AILab/flash-attention/releases
 pip3 install FlagEmbedding faiss-cpu
 pip install debugpy==1.8.0 "ray[default]" debugpy
 ```
 
 ### Dataset Preparation
->Our datasets are stored at the following paths:
-Dataset A: <DATA_PATH_1>
-Dataset B: <DATA_PATH_2>
+>Our datasets are in:
+```bash
+Training Dataset: <DATA_PATH_1>
+Evaluation Dataset: <DATA_PATH_2>
+```
 
 ### Quick Start: Prompt-R1 
 ```bash
-nohup run_prompt-R1.sh > Prompt-R1.out &
+nohup bash run_prompt-R1.sh > Prompt-R1_training.out &
 ```
 
 ### Deploy an Open-Source Model Locally
