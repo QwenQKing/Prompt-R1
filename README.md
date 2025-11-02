@@ -22,7 +22,7 @@ By integrating **collaborative prompting** and **reinforcement learning**, **Pro
 ## Experimental Results
 **Results of Different Large language models:**
 <div align="center">
-  <img src="figs/fig3.png" width="90%"/>
+  <img src="figs/fig3.png" width="100%"/>
 </div>
 
 
