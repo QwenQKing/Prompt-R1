@@ -7,10 +7,6 @@ import json  # JSON编解码
 import asyncio
 from openai import AsyncOpenAI  # 改用异步客户端
 
-# API_KEY = "sk-RoNKdBYNaF4OyyLH1d06767012634f0e9eF4323f42F93a3f"  # 替换为你的 OpenAI API Key
-
-
-# client = openai.OpenAI(api_key = API_KEY, base_url = "https://api.apiyi.com/v1")
 # API_KEY = "EMPTY"
 # MODEL = "gpt-oss-20b"
 # BASE_URL = "http://192.168.80.1:8006/v1"
