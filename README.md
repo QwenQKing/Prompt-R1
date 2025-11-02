@@ -97,9 +97,9 @@ nohup python -m vllm.entrypoints.openai.api_server     --model gpt-oss-20b     -
 ### Evaluation
 #### 1.Edit model_merge.sh and set the paths
 ```bash
-export CHECKPOINT_DIR='./checkpoints/Prompt-R1/grpo-qwen2.5-1.5b-instruct/global_step_320/actor'
-export HF_MODEL_PATH='./Qwen/Qwen2.5-1.5B-Instruct'
-export TARGET_DIR='./merge_model/Qwen2.5-1.5B-Instruct'
+export CHECKPOINT_DIR='checkpoints/Prompt-R1/grpo-qwen3-4b-gpt-4o-mini-test-10/global_step_4/actor'
+export HF_MODEL_PATH='./Qwen/Qwen3-4B'
+export TARGET_DIR='./merge_model/Prompt-R1_Qwen3-4B'
 ```
 
 #### 2.Edit vllm_serve.sh and point to the merged folder
@@ -107,18 +107,18 @@ export TARGET_DIR='./merge_model/Qwen2.5-1.5B-Instruct'
 export MODEL_NAME='./merge_model/Qwen2.5-1.5B-Instruct'
 ```
 
-#### 3.Single-Example Inference
+#### 3.Inference
 ```bash
 python inference.py
 ```
 
-#### 4.Batch inference & scoring
+#### 4.Batch inference & Evaluation
 ```bash
 python batch_inference.py
 python eval_scores.py
 ```
 
-## BibTex
+<!-- ## BibTex
 
 If you find this work is helpful for your research, please cite:
 
@@ -132,10 +132,10 @@ If you find this work is helpful for your research, please cite:
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2507.21892}, 
 }
-```
+``` -->
 
 For further questions, please contact: wenjinliu23@outlook.com.
 
 ## Acknowledgement
 
-This repo benefits from [Agent-R1](https://github.com/0russwest0/Agent-R1), [HyperGraphRAG](https://github.com/LHRLAB/HyperGraphRAG), [FlashRAG](https://github.com/RUC-NLPIR/FlashRAG), [LightRAG](https://github.com/HKUDS/LightRAG), [HippoRAG2](https://github.com/OSU-NLP-Group/HippoRAG), [R1-Searcher](https://github.com/RUCAIBox/R1-Searcher) and [Search-R1](https://github.com/RUCAIBox/R1-Searcher). Thanks for their wonderful works.
+This repo benefits from [Agent-R1](https://github.com/0russwest0/Agent-R1), [R1-Searcher](https://github.com/RUCAIBox/R1-Searcher), [Graph-R1](https://github.com/LHRLAB/Graph-R1), and [Search-R1](https://github.com/RUCAIBox/R1-Searcher). Thanks for their wonderful works.

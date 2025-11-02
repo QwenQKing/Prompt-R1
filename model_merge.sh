@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CHECKPOINT_DIR='checkpoints/Prompt-R1-test/grpo-qwen3-4b-gpt-4o-mini-test-10/global_step_4/actor'
+export CHECKPOINT_DIR='checkpoints/Prompt-R1/Prompt-R1-qwen3-4b-gpt-4o-mini/global_step_4/actor'
 export HF_MODEL_PATH='./Qwen/Qwen3-4B'
 export TARGET_DIR='./merge_model/Prompt-R1_Qwen3-4B'
 
