@@ -62,13 +62,7 @@ BASE_URL = "url"
 
 
 ### 2. Deploy an Open-Source Model Locally
-#### 1. Configure the agent to call your local API
->Edit agent_r1/tool/tools/search_tool.py and set the local API endpoint and model name
-```bash
-base_url = "http://<SERVER_IP>:8000/v1"
-```
-
-#### 2. Install vLLM and dependencies
+#### 1. Install vLLM and dependencies
 ```bash
 # Create environment
 conda create -n vllmapi python=3.12 -y
@@ -78,11 +72,15 @@ pip install transformers accelerate huggingface_hub
 pip install vllm
 ```
 
-#### 3. Start the OpenAI-compatible server:
+#### 2. Start the OpenAI-compatible server:
 ```bash
 nohup bash vllm_api.sh > api.out 2>&1 &
 ```
-
+#### 1.  To use closed source LLM, modify promptr1_agent\tool\tools\LLM-toolpy to call your local API:
+>Edit agent_r1/tool/tools/search_tool.py and set the local API endpoint and model name
+```bash
+base_url = "http://<SERVER_IP>:8006/v1"
+```
 
 ### Evaluation
 #### 1.Edit model_merge.sh and set the paths:
