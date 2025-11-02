@@ -14,13 +14,13 @@ Prompt-R1: Collaborative Automatic Prompting Framework via End-to-end Reinforcem
 
 
 <div align="center">
-  <img src="figs/F2.png" width="90%"/>
+  <img src="figs/fig2.png" width="90%"/>
 </div>
 
 By integrating **collaborative prompting** and **reinforcement learning**, **Prompt-R1** offers a **plug-and-play framework** that supports both **inference** and **training** with **various large-scale LLMs** as the environment. 
 
 ## Experimental Results
-**Results on Different RL Algorithms:**
+**Results of Different Large language models:**
 <table>
   <tr>
     <td><img src="./figs/1_f1.png" width="100%"/></td>
@@ -30,25 +30,7 @@ By integrating **collaborative prompting** and **reinforcement learning**, **Pro
   </tr>
 </table>
 
-**Results on Different GraphRAG Datasets:**
-<table>
-  <tr>
-    <td><img src="./figs/2_f1.png" width="100%"/></td>
-    <td><img src="./figs/2_em.png" width="100%"/></td>
-    <td><img src="./figs/2_res.png" width="100%"/></td>
-    <td><img src="./figs/2_turn.png" width="100%"/></td>
-  </tr>
-</table>
 
-**Results on Different Parameter Scale of LLM:**
-<table>
-  <tr>
-    <td><img src="./figs/3_f1.png" width="100%"/></td>
-    <td><img src="./figs/3_em.png" width="100%"/></td>
-    <td><img src="./figs/3_res.png" width="100%"/></td>
-    <td><img src="./figs/3_turn.png" width="100%"/></td>
-  </tr>
-</table>
 
 ## Prompt-R1 Implementation
 
