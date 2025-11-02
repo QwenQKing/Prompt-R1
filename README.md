@@ -49,18 +49,19 @@ Evaluation Dataset: dataset\eval_data
 ```
 
 ### Quick Start: Prompt-R1 
-#### To use closed source LLM, modify promptr1_agent\tool\tools\LLM-toolpy:
+
+```bash
+nohup bash run_prompt-R1.sh > Prompt-R1_training.out &
+```
+#### 1. To use closed source LLM, modify promptr1_agent\tool\tools\LLM-toolpy:
 ```bash
 API_KEY = "your_api_key"
 MODEL = "model_name"
 BASE_URL = "url"
 ```
 
-```bash
-nohup bash run_prompt-R1.sh > Prompt-R1_training.out &
-```
 
-### Deploy an Open-Source Model Locally
+### 2. Deploy an Open-Source Model Locally
 #### 1. Configure the agent to call your local API
 >Edit agent_r1/tool/tools/search_tool.py and set the local API endpoint and model name
 ```bash
