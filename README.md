@@ -49,6 +49,13 @@ Evaluation Dataset: dataset\eval_data
 ```
 
 ### Quick Start: Prompt-R1 
+#### With Closed-source LLM:
+```bash
+API_KEY = "your_api_key"
+MODEL = "model_name"
+BASE_URL = "url"
+```
+
 ```bash
 nohup bash run_prompt-R1.sh > Prompt-R1_training.out &
 ```
@@ -126,7 +133,7 @@ If you find this work is helpful for your research, please cite:
 }
 ```
 
-For further questions, please contact: haoran.luo@ieee.org.
+For further questions, please contact: wenjinliu23@outlook.com.
 
 ## Acknowledgement
 
