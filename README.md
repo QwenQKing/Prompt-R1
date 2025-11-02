@@ -50,14 +50,16 @@ Evaluation Dataset: dataset\eval_data
 
 ### Quick Start: Prompt-R1 
 
-```bash
-nohup bash run_prompt-R1.sh > Prompt-R1_training.out &
-```
-#### 1. To use closed source LLM, modify promptr1_agent\tool\tools\LLM-toolpy:
+
+### 1. To use closed source LLM, modify promptr1_agent\tool\tools\LLM-toolpy:
 ```bash
 API_KEY = "your_api_key"
 MODEL = "model_name"
 BASE_URL = "url"
+```
+>Run:
+```bash
+nohup bash run_prompt-R1.sh > Prompt-R1_training.out &
 ```
 
 
@@ -76,7 +78,7 @@ pip install vllm
 ```bash
 nohup bash vllm_api.sh > api.out 2>&1 &
 ```
-#### 1.  To use closed source LLM, modify promptr1_agent\tool\tools\LLM-toolpy to call your local API:
+#### 3. To use closed source LLM, modify promptr1_agent\tool\tools\LLM-toolpy to call your local API:
 >Edit agent_r1/tool/tools/search_tool.py and set the local API endpoint and model name
 ```bash
 base_url = "http://<SERVER_IP>:8006/v1"
