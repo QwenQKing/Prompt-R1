@@ -21,14 +21,9 @@ By integrating **collaborative prompting** and **reinforcement learning**, **Pro
 
 ## Experimental Results
 **Results of Different Large language models:**
-<table>
-  <tr>
-    <td><img src="./figs/1_f1.png" width="100%"/></td>
-    <td><img src="./figs/1_em.png" width="100%"/></td>
-    <td><img src="./figs/1_res.png" width="100%"/></td>
-    <td><img src="./figs/1_turn.png" width="100%"/></td>
-  </tr>
-</table>
+<div align="center">
+  <img src="figs/fig3.png" width="90%"/>
+</div>
 
 
 
