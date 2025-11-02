@@ -1,6 +1,7 @@
 # Prompt-R1: Interact with LLMs more effectively on behalf of humans
 
-Prompt-R1: Collaborative Automatic Prompting Framework via End-to-end Reinforcement Learning [[paper](https://arxiv.org/abs/2507.21892)]
+Prompt-R1: Collaborative Automatic Prompting Framework via End-to-end Reinforcement Learning 
+<!-- [[paper](https://arxiv.org/abs/2507.21892)] -->
 
 
 ## Overview
