@@ -49,8 +49,8 @@ pip install debugpy==1.8.0 "ray[default]" debugpy
 ### Dataset Preparation
 >Our datasets are in:
 ```bash
-Training Dataset: <DATA_PATH_1>
-Evaluation Dataset: <DATA_PATH_2>
+Training Dataset: dataset\train_data
+Evaluation Dataset: dataset\eval_data
 ```
 
 ### Quick Start: Prompt-R1 

@@ -8,12 +8,8 @@ import asyncio
 from openai import AsyncOpenAI  # 改用异步客户端
 
 # API_KEY = "sk-RoNKdBYNaF4OyyLH1d06767012634f0e9eF4323f42F93a3f"  # 替换为你的 OpenAI API Key
-API_KEY = "sk-A7NpKHzGjMjEgk3MEd4e8960C9F74fDbB5433822C03aBa3f"
-MODEL = "gpt-4o-mini"  # 对应 mini 模型也是写 gpt-4o
-BASE_URL = "https://api.apiyi.com/v1"
-# API_KEY = "sk-zk2f60ec9a2a066af5105c5e333788e5b7c67b443f994450"
-# MODEL = "llama-4-maverick-17b-128e-instruct"  # 对应 mini 模型也是写 gpt-4o
-# BASE_URL = "https://api.zhizeng.com/v1"
+
+
 # client = openai.OpenAI(api_key = API_KEY, base_url = "https://api.apiyi.com/v1")
 # API_KEY = "EMPTY"
 # MODEL = "gpt-oss-20b"
