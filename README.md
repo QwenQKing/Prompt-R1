@@ -49,7 +49,7 @@ Evaluation Dataset: dataset\eval_data
 ```
 
 ### Quick Start: Prompt-R1 
-#### With Closed-source LLM:
+#### To use closed source LLM, modify promptr1_agent\tool\tools\LLM-toolpy:
 ```bash
 API_KEY = "your_api_key"
 MODEL = "model_name"
