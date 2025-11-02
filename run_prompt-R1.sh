@@ -1,7 +1,6 @@
 export BASE_MODEL='./Qwen/Qwen3-4B'
-export WANDB_API_KEY='38d52e8525127f822ada639cac6ce719f36ba3fe'
-export PROJECT_NAME='Prompt-R1-test'
-export EXPERIMENT_NAME='grpo-qwen3-4b-gpt-4o-mini-test-10'
+export PROJECT_NAME='Prompt-R1'
+export EXPERIMENT_NAME='Prompt-R1-qwen3-4b-gpt-4o-mini'
 # 只用 GPU 0,1,2,3
 export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
 
@@ -11,7 +10,7 @@ ray stop
 
 ray start --head --num-gpus=8
 
-python3 -m agent_r1.src.main_agent \
+python3 -m promptr1_agent.src.main_agent \
     algorithm.adv_estimator=grpo \
     data.train_files=['dataset/train_data/train.parquet'] \
     data.val_files=['dataset/train_data/validation.parquet'] \

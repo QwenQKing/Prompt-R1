@@ -78,33 +78,23 @@ pip install transformers accelerate huggingface_hub
 pip install vllm
 ```
 
-#### 3. Start the OpenAI-compatible server
->Set GPUs and tensor parallelism according to your hardware.
+#### 3. Start the OpenAI-compatible server:
 ```bash
-CUDA_VISIBLE_DEVICES=0,1 \ 
-python -m vllm.entrypoints.openai.api_server \
-  --model /data/yichao/wenjin/models/gpt-oss-20b \
-  --port 8000 \
-  --tensor-parallel-size 2 \
-#   --gpu-memory-utilization 0.70 \
-#   --dtype bfloat16 \
-#   --max-model-len 32768 \
-#   --max-num-seqs 32
-nohup python -m vllm.entrypoints.openai.api_server     --model gpt-oss-20b     --tensor-parallel-size 8     --host 0.0.0.0     --port 8000 > api.out 2>&1 &
+nohup bash vllm_api.sh > api.out 2>&1 &
 ```
 
 
 ### Evaluation
-#### 1.Edit model_merge.sh and set the paths
+#### 1.Edit model_merge.sh and set the paths:
 ```bash
-export CHECKPOINT_DIR='checkpoints/Prompt-R1/grpo-qwen3-4b-gpt-4o-mini-test-10/global_step_4/actor'
+export CHECKPOINT_DIR='checkpoints/Prompt-R1/Prompt-R1-qwen3-4b-gpt-4o-mini/global_step_320/actor'
 export HF_MODEL_PATH='./Qwen/Qwen3-4B'
 export TARGET_DIR='./merge_model/Prompt-R1_Qwen3-4B'
 ```
 
-#### 2.Edit vllm_serve.sh and point to the merged folder
+#### 2.Edit vllm_serve.sh:
 ```bash
-export MODEL_NAME='./merge_model/Qwen2.5-1.5B-Instruct'
+export MODEL_NAME='./merge_model/Prompt-R1_Qwen3-4B'
 ```
 
 #### 3.Inference
