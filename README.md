@@ -1,7 +1,6 @@
 # Prompt-R1: Enhancing LLM interaction on behalf of humans
 
-Prompt-R1: Collaborative Automatic Prompting Framework via End-to-end Reinforcement Learning 
-<!-- [[paper](https://arxiv.org/abs/2507.21892)] -->
+Prompt-R1: Collaborative Automatic Prompting Framework via End-to-end Reinforcement Learning [[paper](https://arxiv.org/abs/2511.01016)]
 
 
 ## Overview
@@ -39,7 +38,7 @@ pip3 install -e .
 pip3 install vllm==0.8.3
 pip3 install flash-attn==2.7.4.post1  # Download: https://github.com/Dao-AILab/flash-attention/releases
 pip3 install FlagEmbedding faiss-cpu
-pip install debugpy==1.8.0 "ray[default]" debugpy
+pip3 install debugpy==1.8.0 "ray[default]" debugpy
 ```
 
 ### Dataset Preparation
@@ -71,8 +70,8 @@ nohup bash run_prompt-R1.sh > Prompt-R1_training.out &
 conda create -n vllmapi python=3.12 -y
 conda activate vllmapi
 # Install dependencies
-pip install transformers accelerate huggingface_hub
-pip install vllm
+pip3 install transformers accelerate huggingface_hub
+pip3 install vllm
 ```
 
 #### 2. Start the OpenAI-compatible server:
@@ -109,21 +108,21 @@ python batch_inference.py
 python eval_scores.py
 ```
 
-<!-- ## BibTex
+## BibTex
 
 If you find this work is helpful for your research, please cite:
 
 ```bibtex
-@misc{luo2025graphr1,
-      title={Graph-R1: Towards Agentic GraphRAG Framework via End-to-end Reinforcement Learning}, 
-      author={Haoran Luo and Haihong E and Guanting Chen and Qika Lin and Yikai Guo and Fangzhi Xu and Zemin Kuang and Meina Song and Xiaobao Wu and Yifan Zhu and Luu Anh Tuan},
+@misc{liu2025promptr1collaborativeautomaticprompting,
+      title={Prompt-R1: Collaborative Automatic Prompting Framework via End-to-end Reinforcement Learning}, 
+      author={Wenjin Liu and Haoran Luo and Xueyuan Lin and Haoming Liu and Tiesunlong Shen and Jiapu Wang and Rui Mao and Erik Cambria},
       year={2025},
-      eprint={2507.21892},
+      eprint={2511.01016},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2507.21892}, 
+      url={https://arxiv.org/abs/2511.01016}, 
 }
-``` -->
+```
 
 For further questions, please contact: wenjinliu23@outlook.com.
 
