@@ -1,9 +1,3 @@
-<!-- # Prompt-R1: Enhancing LLM interaction on behalf of humans
-
-Prompt-R1: Collaborative Automatic Prompting Framework via End-to-end Reinforcement Learning [[paper](https://arxiv.org/abs/2511.01016)]
-
-
-## Overview -->
 # Prompt-R1: Enhancing LLM interaction on behalf of humans
 
 <div align="center">
@@ -12,7 +6,7 @@ Prompt-R1: Collaborative Automatic Prompting Framework via End-to-end Reinforcem
 [![GitHub Stars](https://img.shields.io/github/stars/QwenQKing/Prompt-R1?style=social)](https://github.com/QwenQKing/Prompt-R1)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## Prompt-R1: Collaborative Automatic Prompting Framework via End-to-end Reinforcement Learning
+### **Prompt-R1**: Collaborative Automatic Prompting Framework via End-to-end Reinforcement Learning
 
 [📄 Paper](https://arxiv.org/abs/2511.01016) | [🚀 Quick Start](#quick-start-prompt-r1) | [💬 Contact](mailto:wenjinliu23@outlook.com)
 
