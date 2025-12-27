@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- ===== Meta tags (可以以后再细改) ===== -->
+  <meta name="description" content="Prompt-R1: Collaborative Automatic Prompting Framework via End-to-end Reinforcement Learning">
+  <meta property="og:title" content="Prompt-R1: Collaborative Automatic Prompting Framework via End-to-end RL"/>
+  <meta property="og:description" content="An automatic, collaborative prompting framework where a small LLM generates prompts and a large LLM performs reasoning, trained with end-to-end reinforcement learning."/>
+  <meta property="og:url" content="https://QwenQKing.github.io/Prompt-R1/"/>
+  <meta property="og:image" content="static/images/1-overview.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="Prompt-R1"/>
+  <meta name="twitter:description" content="Prompt-R1: Collaborative Automatic Prompting Framework via End-to-end Reinforcement Learning.">
+  <meta name="twitter:image" content="static/images/1-overview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="Prompt-R1, prompting, reinforcement learning, large language models, LLM">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Prompt-R1</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- ===== JS ===== -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+  <!-- ================= Hero + 标题 ================= -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+
+            <!-- 标题 + logo -->
+            <div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 20px;">
+              <img src="logo.png" alt="Prompt-R1 Logo" style="width: 80px; height: 80px; object-fit: contain;">
+              <h1 class="title is-1 publication-title">Prompt-R1</h1>
+            </div>
+
+            <!-- 副标题 -->
+            <h2 class="title is-5">
+              Collaborative Automatic Prompting Framework via End-to-end Reinforcement Learning
+            </h2>
+
+            <!-- 作者 -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><a href="#" target="_blank">Wenjin Liu</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Haoran Luo</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Xueyuan Lin</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Haoming Liu</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Tiesunlong Shen</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Jiapu Wang</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Rui Mao</a>,</span>
+              <span class="author-block"><a href="#" target="_blank">Erik Cambria</a></span>
+            </div>
+<!--
+            <!-- 单位 / 说明 
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                arXiv:2511.01016 &nbsp; <br>
+                <strong style="color: red;">arXiv preprint, 2025</strong>
+              </span>
+            </div>
+-->
+            
+
+            <!-- 链接按钮 -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- arXiv 页面 -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2511.01016" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+               
+
+                <!-- github -->
+                <span class="link-block">
+                  <a href="https://github.com/QwenQKing/Prompt-R1" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Github</span>
+                  </a>
+                </span>
+
+                
+
+               <span class="link-block">
+  <a href="https://huggingface.co/datasets/QwenQKing/Prompt-R1" target="_blank"
+     class="external-link button is-normal is-rounded is-dark">
+    <span class="icon">🤗</span>
+    <span>Dataset</span>
+  </a>
+</span>
+                <span class="link-block">
+  <a href="https://huggingface.co/QwenQKing/Prompt-R1" target="_blank"
+     class="external-link button is-normal is-rounded is-dark">
+    <span class="icon">🤗</span>
+    <span>HF Models</span>
+  </a>
+</span>
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== 图片轮播（翻页） =================== -->
+  <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <!-- Slide 1: Figure 1 -->
+        <div class="item">
+          <img src="static/images/1-overview.png" alt="Prompt-R1 interaction example"/>
+          <h2 class="subtitle has-text-centered">
+            An example of Prompt-R1 agent working with a large-scale LLM to answer a question.
+            The agent obtains the correct answer step by step through multi-turn prompt interaction.
+          </h2>
+        </div>
+
+        <!-- Slide 2: Figure 2 -->
+        <div class="item">
+          <img src="static/images/2-QA.png" alt="Comparison of prompting and optimization methods"/>
+          <h2 class="subtitle has-text-centered">
+            Comparison of different methods for improving prompt understanding and task adaptability of LLMs:
+            human–LLM interaction, prompt engineering, fine-tuning optimization, and the collaborative automatic prompting
+            interaction framework Prompt-R1.
+          </h2>
+        </div>
+
+        <!-- Slide 3: Figure 3 -->
+        <div class="item">
+          <img src="static/images/3-Comparison.png" alt="Prompt-R1 framework overview"/>
+          <h2 class="subtitle has-text-centered">
+            Overview of the Prompt-R1 framework. A small-scale LLM acts as an agent, interacting with a
+            large-scale LLM environment through multi-turn prompts. A double-constrained reward is used to optimize the
+            prompt agent via end-to-end reinforcement learning.
+          </h2>
+        </div>
+
+        <!--  Slide 4: Your Table -->
+        <div class="item">
+          <img src="static/images/4-table1.png" alt="Prompt-R1 comparison table"/>
+          <h2 class="subtitle has-text-centered">
+            Performance comparison of <strong>Prompt-R1</strong> with state-of-the-art prompting and fine-tuning
+            methods on eight public training datasets, including multi-hop reasoning (2WikiMultihopQA, HotpotQA),
+            mathematical computation (GSM8K, DAPO Math), standard QA (MusiQue, PopQA), and text generation
+            tasks (BookSum, WritingPrompts). <strong>Δ↑</strong> denotes the improvement over the GPT-4o-mini
+            baseline; higher values indicate stronger performance. Bold numbers mark the best results, and all
+            metrics are reported in percentage (%).
+          </h2>
+        </div>
+      
+        <!-- Slide 5: OOD Table comparison -->
+<div class="item">
+  <img src="static/images/5-table2.png" alt="Prompt-R1 out-of-distribution comparison table"/>
+  <h2 class="subtitle has-text-centered">
+    Performance comparison of <strong>Prompt-R1</strong> with selected baselines on four out-of-distribution
+    datasets across multiple tasks, including multi-hop reasoning (TriviaQA), mathematical computation (MathQA),
+    standard QA (SQuAD v2), and text generation (XSum). Higher values indicate improved robustness and
+    generalization beyond in-distribution training data.
+  </h2>
+</div>
+        <!-- Slide 6: Radar chart comparison -->
+<div class="item">
+  <img src="static/images/6-radar.png" alt="Radar chart: LLM performance with and without Prompt-R1"/>
+  <h2 class="subtitle has-text-centered">
+    Comparison of six large language models <strong>with</strong> and <strong>without</strong> the Prompt-R1 agent
+    across eight datasets. Metrics include F1 for multi-hop reasoning (2Wiki, Hotpot) and standard QA
+    (MusiQue, PopQA), EM for mathematical computation (GSM8K, DAPO), and SSim for text generation
+    (BookSum, WritingPrompts). Prompt-R1 brings consistent improvements across all tasks.
+  </h2>
+</div>
+        <!-- Slide 7: Average EM / F1 / SSim with and without Prompt-R1 -->
+<div class="item">
+  <img src="static/images/7-avg.png"
+       alt="Average EM, F1, and SSim scores for six LLMs on OOD datasets, with and without Prompt-R1 agent"/>
+  <h2 class="subtitle has-text-centered">
+    Comparison of the average <strong>EM</strong>, <strong>F1</strong>, and <strong>SSim</strong> scores for six
+    large language models on out-of-distribution datasets, together with the averages obtained when these
+    models are equipped with the <strong>Prompt-R1</strong> agent. The hatched bars indicate the performance
+    after applying Prompt-R1, showing consistent gains across all metrics.
+  </h2>
+</div>
+        <!-- Slide 8: Ablation Study -->
+<div class="item">
+  <img src="static/images/8-ablation.png"
+       alt="Ablation study of Prompt-R1 under different configurations"/>
+  <h2 class="subtitle has-text-centered">
+    Ablation analysis of <strong>Prompt-R1</strong> (using GPT-4o-mini as the environment), evaluated on
+    both in-distribution and out-of-distribution datasets. The study compares the full Prompt-R1 system
+    with three reduced variants: removing the LLM-as-Environment component (<strong>w/o Env.</strong>),
+    disabling reinforcement learning (<strong>w/o R.L.</strong>), and removing the Prompt-R1 agent
+    (<strong>w/o Agent</strong>). The full model consistently achieves the strongest performance across
+    all metrics.
+  </h2>
+</div>
+        <!-- Slide 9: Training process, interaction turns, and metric comparison -->
+<div class="item">
+  <img src="static/images/9-training.png"
+       alt="Training process, interaction turns, and comparisons of EM, F1, and SSim for Prompt-R1"/>
+  <h2 class="subtitle has-text-centered">
+    (a–b) Training process and interaction turns of the <strong>Prompt-R1</strong> agent
+    under different environments (GPT-4o-mini and GPT-OSS-20B).  
+    (c–e) Comparison of various Prompt-R1 variants with baselines on <strong>average EM</strong>, <strong>average F1</strong>,
+    and <strong>average SSim</strong> across in-distribution datasets, showing consistent improvements brought by the
+    Prompt-R1 agent.
+  </h2>
+</div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ============== 轮播结束 ============== -->
+
+  <!-- ============== Abstract ============== -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Advanced large language models are rapidly emerging, but their performance in real applications
+              is often constrained by users’ inability to craft high-quality prompts, especially for complex tasks.
+              <strong>Prompt-R1</strong> addresses this challenge with an end-to-end reinforcement learning framework in which
+              a small-scale LLM collaborates with large-scale LLMs through multi-turn prompt interactions.
+            </p>
+            <p>
+              The small model is treated as a prompt agent that thinks and generates prompts, while the large model
+              performs complex reasoning and produces task outputs. A dual-constrained reward is designed to jointly
+              optimize answer correctness, prompt generation quality, and reasoning accuracy.
+              Experiments on multiple public datasets show that Prompt-R1 significantly outperforms strong baselines
+              across tasks, demonstrating the effectiveness of collaborative automatic prompting.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Paper PDF（可改路径） ============== -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Paper</h2>
+        <!-- 你之后可以把 static/pdfs/prompt-r1.pdf 换成自己的文件路径 -->
+        <iframe src="static/pdfs/prompt-r1.pdf" width="100%" height="550"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== BibTeX ============== -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{liu2025promptr1collaborativeautomaticprompting,
+  title         = {Prompt-R1: Collaborative Automatic Prompting Framework via End-to-end Reinforcement Learning},
+  author        = {Wenjin Liu and Haoran Luo and Xueyuan Lin and Haoming Liu and
+                   Tiesunlong Shen and Jiapu Wang and Rui Mao and Erik Cambria},
+  year          = {2025},
+  eprint        = {2511.01016},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2511.01016}
+}</code></pre>
+    </div>
+  </section>
+
+  <!-- ============== Footer ============== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">
+                Academic Project Page Template
+              </a>
+              which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br>
+              This website is licensed under a
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                Creative Commons Attribution-ShareAlike 4.0 International License
+              </a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
