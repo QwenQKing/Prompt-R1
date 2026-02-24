@@ -14,9 +14,9 @@ import numpy as np
 from openai import OpenAI
 from datetime import datetime
 
-from agent_r1.tool.envs.nous import NousToolEnv
-from agent_r1.tool.tools import _default_tool
-import agent_r1.vllm_infer.config as default_config
+from promptr1_agent.tool.envs.nous import NousToolEnv
+from promptr1_agent.tool.tools import _default_tool
+import promptr1_agent.vllm_infer.config as default_config
 
 import debugpy
 
