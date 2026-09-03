@@ -8,7 +8,7 @@
 [![HF Models](https://img.shields.io/badge/Dataset-HuggingFace-orange.svg?logo=huggingface)](https://huggingface.co/QwenQKing/Prompt-R1)
 
 
-### **Prompt-R1**: Collaborative Automatic Prompting Framework via End-to-end Reinforcement Learning
+### **[ACL 2026] Prompt-R1: Collaborative Automatic Prompting Framework via End-to-end Reinforcement Learning**
 
 [📄 Paper](https://arxiv.org/abs/2511.01016) | [🚀 Quick Start](#quick-start-prompt-r1) | [💬 Contact](mailto:wenjinliu23@outlook.com)
 
